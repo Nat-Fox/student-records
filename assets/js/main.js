@@ -43,6 +43,7 @@ function mostrarEstudiante() {
             'Tech Skills:' + student.techSkills + '<br>' +
             'Life Skills:' + student.lifeSkills + '<br>' +
             'Status' + student.stats + '</div><br>';
+        console.log(contenido);
     });
 
     contenedor.innerHTML = contenido;
