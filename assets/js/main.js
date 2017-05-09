@@ -18,26 +18,28 @@ const vane = new Student("Vane", 80, 80, "Active");
 //funcion para guardar los datos ingresados (vane).
 
 var listaStudent = [];
+listaStudent.push(su, pola, nat, vane);
+console.log(listaStudent);
 
-function agregarStudent(){
-	
-	var valorStudent = document.getElementById("student").value;
-	student.push(new Tarea (1, 20, valorStudent, false));
-	document.getElementById("student").value = "";
-	return student;
+function agregarEstudiante() {
+    alert('funciona agregarEstudiante');
+    var valorStudent = document.getElementById("student").value;
+    student.push(new Tarea(1, 20, valorStudent, false));
+    document.getElementById("student").value = "";
+    return student;
 }
 
 //imprime los datos una vez que se presione el boton
 
-function mostrarStudent(){
-	printHTML(listaStudent)
-	student.forEach(function(elemento){ 
-	imprimir.innerHTML += "<li>" + "nombre:" + elemento.nombre + "\n Tech Skills: " + elemento.techSkills + "\n Life Skills: " + elemento.lifeSkills + "\n stats: " + elemento.stats + "</li><input type='button' onclick='mostrarStudent' value='student' id='student'"  + "<br><br>"
-	});
+function mostrarEstudiante() {
+    alert('funciona mostrarEstudiante');
+    printHTML(listaStudent)
+    student.forEach(function(elemento) {
+        imprimir.innerHTML += "<li>" + "nombre:" + elemento.nombre + "\n Tech Skills: " + elemento.techSkills + "\n Life Skills: " + elemento.lifeSkills + "\n stats: " + elemento.stats + "</li><input type='button' onclick='mostrarStudent' value='student' id='student'" + "<br><br>"
+    });
 }
 
-function printHTML (html){
-  imprimir.innerHTML = '';
-  imprimir.innerHTML = html;
+function printHTML(html) {
+    imprimir.innerHTML = '';
+    imprimir.innerHTML = html;
 }
-
