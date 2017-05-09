@@ -31,11 +31,11 @@ function agregarEstudiante() {
 
 //imprime los datos una vez que se presione el boton
 
-function mostrarEstudiante() {
+function mostrarEstudiante(){
     alert('funciona mostrarEstudiante');
     printHTML(listaStudent)
     student.forEach(function(elemento) {
-        imprimir.innerHTML += "<li>" + "nombre:" + elemento.nombre + "\n Tech Skills: " + elemento.techSkills + "\n Life Skills: " + elemento.lifeSkills + "\n stats: " + elemento.stats + "</li><input type='button' onclick='mostrarStudent' value='student' id='student'" + "<br><br>"
+        listaStudent.innerHTML += "<li>" + "nombre:" + elemento.nombre + "\n Tech Skills: " + elemento.techSkills + "\n Life Skills: " + elemento.lifeSkills + "\n stats: " + elemento.stats + "</li><input type='button' onclick='mostrarStudent' value='student' id='student'" + "<br><br>"
     });
 }
 
