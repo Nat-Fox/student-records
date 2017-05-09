@@ -31,17 +31,19 @@ function agregarEstudiante() {
     console.log(listaStudent);
 }
 
-//imprime los datos una vez que se presione el boton
+//funcion que imprime los datos una vez que se presione el boton
 
 function mostrarEstudiante() {
-    alert('funciona mostrarEstudiante');
-    printHTML(listaStudent)
-    student.forEach(function(elemento) {
-        imprimir.innerHTML += "<li>" + "nombre:" + elemento.nombre + "\n Tech Skills: " + elemento.techSkills + "\n Life Skills: " + elemento.lifeSkills + "\n stats: " + elemento.stats + "</li><input type='button' onclick='mostrarStudent' value='student' id='student'" + "<br><br>"
-    });
-}
+    var contenedor = document.getElementById('mostrar');
+    var contenido = '';
 
-function printHTML(html) {
-    imprimir.innerHTML = '';
-    imprimir.innerHTML = html;
+    //recorremos el arreglo listaStudent
+    listaStudent.forEach(function(student) {
+        contenido += '<div>' + student.nombre + '<br>' +
+            'Tech Skills:' + student.techSkills + '<br>' +
+            'Life Skills:' + student.lifeSkills + '<br>' +
+            'Status' + student.stats + '</div><br>';
+    });
+
+    contenedor.innerHTML = contenido;
 }
