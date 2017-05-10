@@ -1,3 +1,4 @@
+
 //función creada por pau
 function Student(nombre, techSkills, lifeSkills, stats) {
     this.nombre = nombre;
@@ -39,7 +40,7 @@ function mostrarEstudiante() {
 
     //recorremos el arreglo listaStudent
     listaStudent.forEach(function(student) {
-        contenido += '<div>' + student.nombre + '<br>' +
+        contenido += '<div>' + (student.nombre.charAt(0).toUpperCase()+student.nombre.slice(1)) + '<br>' +
             'Tech Skills:' + student.techSkills + '<br>' +
             'Life Skills:' + student.lifeSkills + '<br>' +
             'Status' + student.stats + '</div><br>';
