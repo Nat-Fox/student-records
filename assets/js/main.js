@@ -13,3 +13,4 @@ const vane = new Student("Vane", 80, 80, "Active")
 
 };
 
+
