@@ -5,6 +5,7 @@ header h1{
 	text-align: center;
 }
 .fondo{
+	background-color:indianred;
 	background-image: url(../img/fondo.jpeg);
 	background-repeat: no-repeat;
 	background-position:  top ;
