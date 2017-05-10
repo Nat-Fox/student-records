@@ -1,4 +1,3 @@
-
 //función creada por pau
 function Student(nombre, techSkills, lifeSkills, stats) {
     this.nombre = nombre;
@@ -21,27 +20,27 @@ var listaStudent = [];
 //función para agregar un estudiante
 function agregarEstudiante() {
     //pedimos los datos por prompt
-do{
-    var nombre = prompt('Introduce tu nombre');   
-    var techSkills = prompt('Ingresa tech skills de la estudiante');
-    var lifeSkills = prompt('Ingresa life skills de la estudiante');
-    var stats = prompt('Ingresa status de la estudiante');
+    do {
+        var nombre = prompt('Introduce tu nombre');
+        var techSkills = prompt('Ingresa tech skills de la estudiante');
+        var lifeSkills = prompt('Ingresa life skills de la estudiante');
+        var stats = prompt('Ingresa status de la estudiante');
 
-    
-} while(nombre== " " || techSkills== " " || lifeSkills== " " || stats == " "){
-    alert('ingrese campo');
-   
-}
-  
+
+    } while (nombre == " " || techSkills == " " || lifeSkills == " " || stats == " ") {
+        alert('ingrese campo');
+
+    }
+
     //creamos a cada estudiante en base al objeto
     var estudiante = new Student(nombre, techSkills, lifeSkills, stats);
-    
+
 
     //estudiante ingresado al arreglo listaStudent
     listaStudent.push(estudiante);
     console.log(listaStudent);
 }
-  
+
 
 //funcion que imprime los datos una vez que se presione el boton
 
@@ -52,19 +51,18 @@ function mostrarEstudiante() {
     //recorremos el arreglo listaStudent
     listaStudent.forEach(function(student) {
 
-        contenido += '<div>' + (student.nombre.charAt(0).toUpperCase()+student.nombre.slice(1)) + '<br>' +
-            'Tech Skills:' + student.techSkills + '<br>' +
-            'Life Skills:' + student.lifeSkills + '<br>' +
-            'Status' + student.stats + '</div><br>';
+        // contenido += '<div>' + (student.nombre.charAt(0).toUpperCase()+student.nombre.slice(1)) + '<br>' +
+        //     'Tech Skills:' + student.techSkills + '<br>' +
+        //     'Life Skills:' + student.lifeSkills + '<br>' +
+        //     'Status' + student.stats + '</div><br>';
 
-        contenido += '<div>'+ '<font color= #FFFFFF>' + '<strong>' + student.nombre.toUpperCase(0).charAt(0) + student.nombre.slice(1).toLowerCase() + '</strong>' + '<br>' +
+        contenido += '<div>' + '<font color= #FFFFFF>' + '<strong>' + student.nombre.toUpperCase(0).charAt(0) + student.nombre.slice(1).toLowerCase() + '</strong>' + '<br>' +
             '<strong>' + 'Tech Skills:' + '</strong>' + student.techSkills + '<br>' +
             '<strong>' + 'Life Skills:' + '</strong>' + student.lifeSkills + '<br>' +
-            '<strong>' + 'Status' + '</strong>' + student.stats + '</font>'+ '</div><br>';
+            '<strong>' + 'Status' + '</strong>' + student.stats + '</font>' + '</div><br>';
 
         console.log(contenido);
     });
 
     contenedor.innerHTML = contenido;
 }
-
