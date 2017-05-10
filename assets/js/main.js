@@ -8,14 +8,12 @@ function Student(nombre, techSkills, lifeSkills, stats) {
 };
 
 //instanciación por kati
+//ejemplos iniciales previo a los prompt
 const su = new Student("Su", 80, 80, "Active");
 const pola = new Student("Pola", 85, 85, "Active");
 const nat = new Student("Nath", 90, 90, "Active");
 const vane = new Student("Vane", 80, 80, "Active");
 
-
-
-//funcion para guardar los datos ingresados (vane).
 
 var listaStudent = [];
 listaStudent.push(su, pola, nat, vane);
@@ -23,17 +21,21 @@ listaStudent.push(su, pola, nat, vane);
 
 
 
-//imprime los datos una vez que se presione el boton
-
-
- var estudiante =  listaStudent.forEach(function(elemento) {
-        elemento.innerHTML += "<li>" + "nombre:" + this.nombre + "Tech Skills: " + this.techSkills + "Life Skills: " + this.lifeSkills + "stats: " + this.stats + "</li>" + "<br><br>"
-    });
-
-
-estudiante();
-
-function printHTML(html) {
-    elemento.innerHTML = '';
-    elemento.innerHTML = html;
+//función para agregar un estudiante
+function agregarEstudiante() {
+    //pedimos los datos por prompt
+    var nombre = prompt('Ingresa nombre de la estudiante');
+    var techSkills = prompt('Ingresa tech skills de la estudiante');
+    var lifeSkills = prompt('Ingresa life skills de la estudiante');
+    var stats = prompt('Ingresa status de la estudiante');
+    //creamos a cada estudiante en base al objeto
+    var estudiante = new Student(nombre, techSkills, lifeSkills, stats);
+    //estudiante ingresado al arreglo listaStudent
+    listaStudent.push(estudiante);
+    console.log(listaStudent);
 }
+
+
+//funcion que imprime los datos una vez que se presione el boton
+
+
