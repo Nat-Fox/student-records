@@ -51,9 +51,9 @@ function mostrarEstudiante() {
     //recorremos el arreglo listaStudent
     listaStudent.forEach(function(student) {
         contenido += '<div>'+ '<font color= #FFFFFF>' + '<strong>' + student.nombre.toUpperCase(0).charAt(0) + student.nombre.slice(1).toLowerCase() + '</strong>' + '<br>' +
-            '<strong>' + 'Tech Skills:' + '</strong>' + student.techSkills + '<br>' +
-            '<strong>' + 'Life Skills:' + '</strong>' + student.lifeSkills + '<br>' +
-            '<strong>' + 'Status' + '</strong>' + student.stats + '</font>'+ '</div><br>';
+            '<strong>' + 'Tech Skills: ' + '</strong>' + student.techSkills + '<br>' +
+            '<strong>' + 'Life Skills: ' + '</strong>' + student.lifeSkills + '<br>' +
+            '<strong>' + 'Status: ' + '</strong>' + student.stats + '</font>'+ '</div><br>';
         console.log(contenido);
     });
 
